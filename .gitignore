@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+venv/
+.env
+*.session
+gold_price_session.session
