@@ -7,7 +7,7 @@ import jdatetime
 from dotenv import load_dotenv
 from flask import Flask, jsonify
 from telethon import TelegramClient, events
-
+from telethon.sessions import StringSession
 # =======================
 # بارگذاری متغیرهای محیطی
 # =======================
@@ -15,6 +15,7 @@ load_dotenv()
 API_ID = int(os.environ.get("API_ID", "0"))
 API_HASH = os.environ.get("API_HASH", "")
 PHONE_NUMBER = os.environ.get("PHONE_NUMBER", "")
+SESSION_STRING = os.environ.get("SESSION_STRING", "")
 
 SOURCE_CHANNEL = 'bazartalair'
 TARGET_CHANNEL = 'jewelry_zabihi'
